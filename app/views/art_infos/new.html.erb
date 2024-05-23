@@ -1,0 +1,18 @@
+<h1>Neon Sign for Github</h1>
+<%= form_for @art_info do |f| %>
+  <%= f.label :key %>
+  <%= f.text_field :key %><br>
+  <%= f.label :image %>
+  <%= f.file_field :image %><br>
+  <%= f.label :recurring %>
+  <%= f.check_box :recurring %><br>
+  <%= f.label :repo_path %>
+  <%= f.text_field :repo_path %><br>
+  <%= f.label :degrade %>
+  <%= f.check_box :degrade %><br>
+  <%= f.label :random %>
+  <%= f.check_box :random %><br>
+  <%= f.submit %>
+<% end %>
+
+<%= image_tag(ArtInfo.last.image)%>

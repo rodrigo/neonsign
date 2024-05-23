@@ -133,3 +133,522 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 4294)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4031220022292200290)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4031220022292200290)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mArtInfo Load (1.0ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2024-05-23 09:02:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rebelatto/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rebelatto/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 376)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4294)
+
+
+Started GET "/arts_info/new" for 127.0.0.1 at 2024-05-23 09:02:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/arts_info/new"):
+  
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:02:51 -0300
+  
+NameError (uninitialized constant ApplicationControll):
+  
+app/controllers/art_infos_controller.rb:1:in `<main>'
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:03:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.0ms | Allocations: 1945)
+
+
+  
+ActionController::MissingExactTemplate (ArtInfosController#new is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.3) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.3) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.3) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.3) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.3) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.3) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.3) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.3) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.3) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.3) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.3) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.3) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.11) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.11) lib/rack/etag.rb:29:in `call'
+rack (3.0.11) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.11) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.11) lib/rack/method_override.rb:28:in `call'
+rack (3.0.11) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.11) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:04:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 412.5ms | Allocations: 94086)
+Completed 200 OK in 421ms (Views: 415.5ms | ActiveRecord: 0.0ms | Allocations: 98178)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:09:10 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1591)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1691)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% form_for @owner do |f| %>
+  <%= f.text_field :key %>
+  <%= f.file_field :image %>
+  <%= f.check_box :recurring %>
+  <%= f.string :repo_path: %>
+  <%= f.check_box :degrade %>
+  <%= f.check_box :random %>
+  <%= f.submit %>
+<% end %>
+
+):
+1:    <% form_for @owner do |f| %>
+2:      <%= f.text_field :key %>
+3:      <%= f.file_field :image %>
+4:      <%= f.check_box :recurring %>
+5:      <%= f.string :repo_path: %>
+6:      <%= f.check_box :degrade %>
+7:      <%= f.check_box :random %>
+8:      <%= f.submit %>
+9:    <% end %>
+  
+app/views/art_infos/new.html.erb:5: syntax error, unexpected ':', expecting ')'
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:09:19 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1283)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2174)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <% form_for @owner do |f| %>
+    2:   <%= f.text_field :key %>
+    3:   <%= f.file_field :image %>
+    4:   <%= f.check_box :recurring %>
+  
+app/views/art_infos/new.html.erb:1
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:09:51 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1306)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1398)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 6.9ms | Allocations: 23377)
+
+
+  
+ActionView::Template::Error (undefined method `art_infos_path' for #<ActionView::Base:0x00000000014960>):
+    1: <% form_for @art_info do |f| %>
+    2:   <%= f.text_field :key %>
+    3:   <%= f.file_field :image %>
+    4:   <%= f.check_box :recurring %>
+  
+app/views/art_infos/new.html.erb:1
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:09:57 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1127)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1381)
+
+
+  
+ActionView::Template::Error (undefined method `art_infos_path' for #<ActionView::Base:0x00000000014c58>):
+    1: <% form_for @art_info do |f| %>
+    2:   <%= f.text_field :key %>
+    3:   <%= f.file_field :image %>
+    4:   <%= f.check_box :recurring %>
+  
+app/views/art_infos/new.html.erb:1
+Started GET "/" for 127.0.0.1 at 2024-05-23 09:09:59 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/rebelatto/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rebelatto/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 269)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 993)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:10:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1896)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 8.4ms | Allocations: 26967)
+
+
+  
+ActionView::Template::Error (undefined method `art_infos_path' for #<ActionView::Base:0x0000000000a820>):
+    1: <% form_for @art_info do |f| %>
+    2:   <%= f.text_field :key %>
+    3:   <%= f.file_field :image %>
+    4:   <%= f.check_box :recurring %>
+  
+app/views/art_infos/new.html.erb:1
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:12:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2970)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3096)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 9.6ms | Allocations: 28165)
+
+
+  
+ActionView::Template::Error (undefined method `string' for #<ActionView::Helpers::FormBuilder:0x00007db6e9053020 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :html=>{:class=>"new_art_info", :id=>"new_art_info"}, :local=>true}, @template=#<ActionView::Base:0x0000000000ae88>, @object=#<ArtInfo id: nil, key: nil, repo_path: nil, recurring: nil, degrade: nil, random: nil, created_at: nil, updated_at: nil>, @object_name="art_info", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=true, @index=nil>):
+    2:   <%= f.text_field :key %>
+    3:   <%= f.file_field :image %>
+    4:   <%= f.check_box :recurring %>
+    5:   <%= f.string :repo_path %>
+    6:   <%= f.check_box :degrade %>
+    7:   <%= f.check_box :random %>
+    8:   <%= f.submit %>
+  
+app/views/art_infos/new.html.erb:5
+app/views/art_infos/new.html.erb:1
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:12:30 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1360)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 33522)
+Completed 200 OK in 70ms (Views: 51.2ms | ActiveRecord: 2.3ms | Allocations: 44396)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:12:37 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1103)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 15638)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 2.8ms | Allocations: 24671)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:13:00 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1854)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 16436)
+Completed 200 OK in 35ms (Views: 19.6ms | ActiveRecord: 2.4ms | Allocations: 25427)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:15:28 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2114)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 16667)
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 2.3ms | Allocations: 25754)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:15:57 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1969)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 16549)
+Completed 200 OK in 35ms (Views: 19.4ms | ActiveRecord: 3.2ms | Allocations: 25545)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:16:31 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1967)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 16524)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 2.5ms | Allocations: 25569)
+
+
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:17:47 -0300
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 746)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:18:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4505)
+  Rendered layout layouts/application.html.erb (Duration: 62.1ms | Allocations: 37051)
+Completed 200 OK in 152ms (Views: 65.7ms | ActiveRecord: 8.5ms | Allocations: 62173)
+
+
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:18:14 -0300
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 741)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:21:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 4511)
+  Rendered layout layouts/application.html.erb (Duration: 71.7ms | Allocations: 37038)
+Completed 200 OK in 154ms (Views: 75.2ms | ActiveRecord: 7.5ms | Allocations: 62161)
+
+
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:21:11 -0300
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+[31mUnpermitted parameters: :authenticity_token, :art_info, :commit. Context: { controller: ArtInfosController, action: create, request: #<ActionDispatch::Request:0x00007fad7ad303e0>, params: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info", "controller"=>"art_infos", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mArtInfo Create (3.4ms)[0m  [1m[32mINSERT INTO "art_infos" ("key", "repo_path", "recurring", "degrade", "random", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", nil], ["repo_path", nil], ["recurring", nil], ["degrade", nil], ["random", nil], ["created_at", "2024-05-23 12:21:11.177688"], ["updated_at", "2024-05-23 12:21:11.177688"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 4.0ms | Allocations: 4290)
+
+
+  [1m[36mArtInfo Load (0.3ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtInfo Load (0.5ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:21:54 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+[31mUnpermitted parameters: :authenticity_token, :art_info, :commit. Context: { controller: ArtInfosController, action: create, request: #<ActionDispatch::Request:0x00007f51d0567d08>, params: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablau", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info", "controller"=>"art_infos", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mArtInfo Create (1.2ms)[0m  [1m[32mINSERT INTO "art_infos" ("key", "repo_path", "recurring", "degrade", "random", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", nil], ["repo_path", nil], ["recurring", nil], ["degrade", nil], ["random", nil], ["created_at", "2024-05-23 12:21:54.553001"], ["updated_at", "2024-05-23 12:21:54.553001"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 19.7ms | Allocations: 27633)
+
+
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:22:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablauzin", "recurring"=>"0", "repo_path"=>"", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mArtInfo Create (1.0ms)[0m  [1m[32mINSERT INTO "art_infos" ("key", "repo_path", "recurring", "degrade", "random", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "xablauzin"], ["repo_path", ""], ["recurring", false], ["degrade", false], ["random", false], ["created_at", "2024-05-23 12:22:49.366530"], ["updated_at", "2024-05-23 12:22:49.366530"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 87ms (ActiveRecord: 10.8ms | Allocations: 27204)
+
+
+  [1m[36mArtInfo Load (0.3ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:23:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 4502)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 36924)
+Completed 200 OK in 156ms (Views: 67.2ms | ActiveRecord: 8.8ms | Allocations: 62040)
+
+
+Started POST "/art_infos" for 127.0.0.1 at 2024-05-23 09:23:25 -0300
+Processing by ArtInfosController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "art_info"=>{"key"=>"xablauzin", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007780415c8a80 @tempfile=#<Tempfile:/tmp/RackMultipart20240523-37953-dumr2p.png>, @content_type="image/png", @original_filename="image.png", @headers="Content-Disposition: form-data; name=\"art_info[image]\"; filename=\"image.png\"\r\nContent-Type: image/png\r\n">, "recurring"=>"1", "repo_path"=>"xirgi", "degrade"=>"0", "random"=>"0"}, "commit"=>"Create Art info"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mArtInfo Create (1.3ms)[0m  [1m[32mINSERT INTO "art_infos" ("key", "repo_path", "recurring", "degrade", "random", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "xablauzin"], ["repo_path", "xirgi"], ["recurring", true], ["degrade", false], ["random", false], ["created_at", "2024-05-23 12:23:25.597376"], ["updated_at", "2024-05-23 12:23:25.597376"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ArtInfo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ArtInfo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["key", "blg1csfoihwjww5jkiha66xxjaok"], ["filename", "image.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 166], ["checksum", "+0MaPUAzEsHk0f7bjwNSgQ=="], ["created_at", "2024-05-23 12:23:25.658737"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "ArtInfo"], ["record_id", 4], ["blob_id", 1], ["created_at", "2024-05-23 12:23:25.662502"]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mArtInfo Update (0.3ms)[0m  [1m[33mUPDATE "art_infos" SET "updated_at" = $1 WHERE "art_infos"."id" = $2[0m  [["updated_at", "2024-05-23 12:23:25.665963"], ["id", 4]]
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (113.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/art_infos_controller.rb:8:in `create'
+[36m  Disk Storage (0.3ms) [0m[32mUploaded file to key: blg1csfoihwjww5jkiha66xxjaok (checksum: +0MaPUAzEsHk0f7bjwNSgQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9ca817d4-5f2e-4bd4-bc98-4f9adaf02056) to Async(default) with arguments: #<GlobalID:0x0000778012602ca0 @uri=#<URI::GID gid://neonsign/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/art_infos_controller.rb:8:in `create'
+No template found for ArtInfosController#create, rendering head :no_content
+Completed 204 No Content in 253ms (ActiveRecord: 122.4ms | Allocations: 56797)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056] Performing ActiveStorage::AnalyzeJob (Job ID: 9ca817d4-5f2e-4bd4-bc98-4f9adaf02056) from Async(default) enqueued at 2024-05-23T12:23:25.810276007Z with arguments: #<GlobalID:0x00007780123a7078 @uri=#<URI::GID gid://neonsign/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mActiveStorage::Blob Update (1.9ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1[0m  [["blob_id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mArtInfo Load (0.1ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" WHERE "art_infos"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mArtInfo Update (0.3ms)[0m  [1m[33mUPDATE "art_infos" SET "updated_at" = $1 WHERE "art_infos"."id" = $2[0m  [["updated_at", "2024-05-23 12:23:25.860311"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9ca817d4-5f2e-4bd4-bc98-4f9adaf02056] Performed ActiveStorage::AnalyzeJob (Job ID: 9ca817d4-5f2e-4bd4-bc98-4f9adaf02056) from Async(default) in 46.05ms
+  [1m[36mArtInfo Load (0.4ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtInfo Load (0.4ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:24:49 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  [1m[36mArtInfo Load (0.2ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ArtInfo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 15219)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 29939)
+Completed 200 OK in 55ms (Views: 34.2ms | ActiveRecord: 6.3ms | Allocations: 39053)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--72dfe173a7ebcdf58178534e58ffa3fe231dd1da/image.png" for 127.0.0.1 at 2024-05-23 09:24:49 -0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--72dfe173a7ebcdf58178534e58ffa3fe231dd1da", "filename"=>"image"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: blg1csfoihwjww5jkiha66xxjaok (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjoyOTo0OS41NTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--03fa8c7f8d83c2f9fd9df7521d8e8e9b669f302e/image.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjoyOTo0OS41NTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--03fa8c7f8d83c2f9fd9df7521d8e8e9b669f302e/image.png
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 2581)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjoyOTo0OS41NTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--03fa8c7f8d83c2f9fd9df7521d8e8e9b669f302e/image.png" for 127.0.0.1 at 2024-05-23 09:24:49 -0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 269)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:28:14 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  [1m[36mArtInfo Load (0.2ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ArtInfo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 14936)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 29655)
+Completed 200 OK in 59ms (Views: 33.6ms | ActiveRecord: 8.7ms | Allocations: 38691)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--72dfe173a7ebcdf58178534e58ffa3fe231dd1da/image.png" for 127.0.0.1 at 2024-05-23 09:28:14 -0300
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--72dfe173a7ebcdf58178534e58ffa3fe231dd1da", "filename"=>"image"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: blg1csfoihwjww5jkiha66xxjaok (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjozMzoxNC43NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--450ec8b401237063fec092efe058bc056ef22ad5/image.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjozMzoxNC43NDVaIiwicHVyIjoiYmxvYl9rZXkifX0=--450ec8b401237063fec092efe058bc056ef22ad5/image.png
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjoyOTo0OS41NTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--03fa8c7f8d83c2f9fd9df7521d8e8e9b669f302e/image.png" for 127.0.0.1 at 2024-05-23 09:28:14 -0300
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 2437)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/art_infos/new" for 127.0.0.1 at 2024-05-23 09:28:26 -0300
+Processing by ArtInfosController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering art_infos/new.html.erb within layouts/application
+  [1m[36mArtInfo Load (0.3ms)[0m  [1m[34mSELECT "art_infos".* FROM "art_infos" ORDER BY "art_infos"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ArtInfo"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/art_infos/new.html.erb:18
+  Rendered art_infos/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3659)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4766)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.9ms | Allocations: 5032)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJibGcxY3Nmb2lod2p3dzVqa2loYTY2eHhqYW9rIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiaW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnaW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNC0wNS0yM1QxMjoyOTo0OS41NTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--03fa8c7f8d83c2f9fd9df7521d8e8e9b669f302e/image.png" for 127.0.0.1 at 2024-05-23 09:28:26 -0300
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"image"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 148)
+
+
