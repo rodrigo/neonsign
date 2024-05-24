@@ -6,12 +6,14 @@ class ArtInfosController < ApplicationController
 
   def create
     @art_info = ArtInfo.create(art_info_params)
-    GithubPainter.new(@art_info).call
+    # GithubPainter.new(@art_info).call
   end
 
   private
 
   def art_info_params
-    params.require(:art_info).permit(:author_email, :key, :image, :random, :recurring, :random, :repo_path, :degrade)
+    params.require(:art_info).permit(
+      :main_branch_name, :author_email, :key, :image, :random, :recurring, :random, :repo_path, :degrade
+    )
   end
 end

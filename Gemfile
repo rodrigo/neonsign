@@ -44,7 +44,8 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem "git"
+# gem "git"
+gem "git", git: 'https://github.com/rodrigo/ruby-git.git'
 gem "rmagick"
 
 group :development, :test do

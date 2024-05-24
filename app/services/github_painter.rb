@@ -17,6 +17,7 @@ class GithubPainter
       :config => ["core.sshCommand=ssh -i #{file.path}", 'submodule.recurse=true']
     )
     git.config('user.email', @art_info.author_email)
+    erase_commits(git) if @art_info.recurring
     current_date = Date.today.last_week.end_of_week - 1.day
     image = Magick::ImageList.new(ActiveStorage::Blob.service.path_for(@art_info.image.key))
     image.rotate(90).flip.each_pixel do |pixel|
@@ -26,11 +27,18 @@ class GithubPainter
       current_date = current_date - 1
     end
 
-    git.push
+    git.push(nil, nil, {force: true})
 
     file.close
   end
 
   private
+
+  def erase_commits(git)
+    git.checkout('orphane', {orphan: true})
+    git.commit('empty xablau', allow_empty: true)
+    git.branch.delete(@art_info.main_branch_name)
+    git.branch.rename(@art_info.main_branch_name)
+  end
 
 end
