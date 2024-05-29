@@ -1,3 +1,4 @@
-tmp/*
-log/*
+tmp/**
+log/**
+storage/**
 /config/master.key
