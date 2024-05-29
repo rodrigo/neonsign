@@ -2,4 +2,4 @@
 /log/**
 /storage/**
 /config/master.key
-config/credentials.yml.enc
+/config/credentials.yml.enc
