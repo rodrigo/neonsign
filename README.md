@@ -1,7 +1,9 @@
 # README
 
 _This is the most useless and fun project I've ever made._
+
 Neon Signs For Git is a rails project that allows you to draws pixel art into github contribution charts.
+
 Check it out on http://neonsignsforgit.com
 
 ## Some things TODO
