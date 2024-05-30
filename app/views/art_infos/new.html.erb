@@ -1,6 +1,19 @@
 <h1>Neon Sign for Github</h1>
+
+-- READ FIRST --<br>
+This is a personal project for recreative use only<br>
+and because is required to inform a private ssh key<br>
+I STRONGELY suggest you to create a github account,<br>
+a repo, and SPECIALY a ssh keypair just for this.<br>
+<br>
+Also, the image has to be 50x7 pixels.<br>
+You can use something like https://www.pixilart.com/draw<br>
+to draw whatever your heart desire.<br>
+Have Fun
+-- READ FIRST --<br>
+
 <%= form_for @art_info do |f| %>
-  <%= f.label :key %>
+  <%= f.label :private_ssh_key %>
   <%= f.text_area :key %><br>
   <%= f.label :author_email %>
   <%= f.text_field :author_email %><br>
@@ -22,3 +35,14 @@
 <%
 =end%>
 <% end %>
+
+-- TODO --<br>
+Recurrency:<br>
+I'm still trying to figure out how to make it recurrent<br>
+but erasing all commits by creating a orphan branch and<br>
+force pushing as main branch will not erase the contributions.<br>
+If you have an ideia, you can colaborate: https://github.com/rodrigo/neonsign
+<br>
+I also will create options like random draw to simulate work so you can<br>
+use if you are a idiot and think that stuff like this matters<br>
+and other fun options like degrade, paint background and reverse.
