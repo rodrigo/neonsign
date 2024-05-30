@@ -8,13 +8,17 @@
   <%= f.text_field :main_branch_name %><br>
   <%= f.label :image %>
   <%= f.file_field :image %><br>
-  <%= f.label :recurring %>
-  <%= f.check_box :recurring %><br>
   <%= f.label :repo_path %>
   <%= f.text_field :repo_path %><br>
-  <%= f.label :degrade %>
+  <%= f.submit %>
+  <%
+=begin%>
+  <%= f.label :recurring %>
+  <%= f.check_box :recurring %><br>
+ <%= f.label :degrade %>
   <%= f.check_box :degrade %><br>
   <%= f.label :random %>
   <%= f.check_box :random %><br>
-  <%= f.submit %>
+<%
+=end%>
 <% end %>
