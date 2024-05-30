@@ -3,3 +3,5 @@ log/
 storage/
 /config/master.key
 /config/credentials.yml.enc
+terraform/.terraform
+terraform/.terraform.lock.hcl

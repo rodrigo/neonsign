@@ -80,5 +80,5 @@ test:
 production:
   <<: *default
   database: neonsign_production
-  username: neonsign
-  password: <%= ENV["NEONSIGN_DATABASE_PASSWORD"] %>
+  username: postgres
+  # password: <%= ENV["NEONSIGN_DATABASE_PASSWORD"] %>

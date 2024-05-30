@@ -6,7 +6,7 @@ class ArtInfosController < ApplicationController
 
   def create
     @art_info = ArtInfo.create(art_info_params)
-    # GithubPainter.new(@art_info).call
+    GithubPainter.new(@art_info).call
   end
 
   private
