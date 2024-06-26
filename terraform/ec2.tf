@@ -42,7 +42,7 @@ Content-Transfer-Encoding: 7bit
 Content-Disposition: attachment; filename="userdata.txt"
 
 #!/bin/bash
-sudo amazon-linux-extras -y install docker
+sudo amazon-linux-extras install -y docker
 sudo service docker start
 aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 525726440883.dkr.ecr.us-east-1.amazonaws.com
 sudo docker pull ${data.aws_ecr_image.neonsign.image_uri}
